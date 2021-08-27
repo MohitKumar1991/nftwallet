@@ -1,0 +1,26 @@
+{
+  "name": "NFT Wallet",
+  "description": "NFT Wallet is made for normal people to be able to hold nfts",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "NFT Wallet"
+  },
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo512.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./static/js/content.js"]
+    }
+  ],
+  "background":{
+    "scripts": ["./static/js/background.js"]
+  },
+  "permissions": ["activeTab"],
+  "optional_permissions": ["<all_urls>"]
+}
